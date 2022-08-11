@@ -1,8 +1,9 @@
 # coding: utf-8
-from flask import Flask
+from flask import Flask, render_template
 app = Flask("projeto")
 @app.route("/")
 def ola_mundo():
-    return "Olá Mundo! Esse é meu primeiro projeto Flask!!", 200
+    return render_template("alo.html"), 200
 
 app.run()
+
